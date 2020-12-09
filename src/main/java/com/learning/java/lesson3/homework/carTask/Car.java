@@ -1,4 +1,4 @@
-package com.learning.java.lesson3.homework;
+package com.learning.java.lesson3.homework.carTask;
 
 public class Car {
     //fields

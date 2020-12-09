@@ -1,4 +1,6 @@
-package com.learning.java.lesson3.homework;
+package com.learning.java.lesson3.homework.carTask;
+
+import com.learning.java.lesson3.homework.carTask.Car;
 
 public class CarsExample {
     public static void main(String[] args) {
