@@ -13,7 +13,6 @@ public class Car {
         this.model = model;
         this.productionYear = productionYear;
         this.price = price;
-
     }
 
     //methods

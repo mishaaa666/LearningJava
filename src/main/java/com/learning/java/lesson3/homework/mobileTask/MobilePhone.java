@@ -1,6 +1,6 @@
 package com.learning.java.lesson3.homework.mobileTask;
 
-public class Mobile {
+public class MobilePhone {
     //fields
     public String mobileVendor;
     public String model;
@@ -16,9 +16,9 @@ public class Mobile {
     public String batteryType;
 
     //constructors
-    public Mobile(String mobileVendor, String model, String productionYear, String screenSize,
-                  String processor, int numberOfCores, int numberOfCameras, String cameraFeatures,
-                  int ram, int rom, String operatingSystem, String batteryType) {
+    public MobilePhone(String mobileVendor, String model, String productionYear, String screenSize,
+                       String processor, int numberOfCores, int numberOfCameras, String cameraFeatures,
+                       int ram, int rom, String operatingSystem, String batteryType) {
         this.mobileVendor = mobileVendor;
         this.model = model;
         this.productionYear = productionYear;
@@ -31,8 +31,6 @@ public class Mobile {
         this.rom = rom;
         this.operatingSystem = operatingSystem;
         this.batteryType = batteryType;
-
-
     }
 
     //methods
