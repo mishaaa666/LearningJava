@@ -15,5 +15,13 @@ public class ShapeExample {
         circle.printColor();
         circle.calculatePerimeter();
         circle.calculateSquare();
+
+        System.out.println();
+
+        Shape rectangle = new Rectangle("yellow", 54.321, 76.543);
+
+        rectangle.printColor();
+        rectangle.calculatePerimeter();
+        rectangle.calculateSquare();
     }
 }

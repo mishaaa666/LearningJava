@@ -23,7 +23,7 @@ public class Circle extends Shape {
 
     @Override
     public void printColor() {
-        System.out.println("Circle color is: " + getColor());
+        System.out.println("Circle color is " + getColor());
     }
 
     @Override

@@ -35,7 +35,7 @@ public class Triangle extends Shape {
 
     @Override
     public void printColor() {
-        System.out.println("Triangle color is: " + getColor());
+        System.out.println("Triangle color is " + getColor());
     }
 
 
