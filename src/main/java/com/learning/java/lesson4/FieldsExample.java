@@ -11,11 +11,11 @@ public class FieldsExample {
         ivan.setAge(25);
         ivan.printInfo();
 
-        //  Student studentPetro = new Student("Petro", 18, 1014);
+         Student studentPetro = new Student("Petro", 18, 1014);
         // System.out.println(ivan.toString());//toString() метод для перетворення в строку
         //System.out.println(ivan);// те саме, що попередня строчка
 
-        String str = "This person is:" + ivan;
+        String str = "This person is:" + studentPetro;
         System.out.println(str);
     }
 
