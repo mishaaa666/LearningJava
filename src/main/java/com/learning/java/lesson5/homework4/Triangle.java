@@ -1,4 +1,4 @@
-package com.learning.java.lesson4.homework4;
+package com.learning.java.lesson5.homework4;
 
 public class Triangle extends Shape {
 
