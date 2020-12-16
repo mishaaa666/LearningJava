@@ -1,10 +1,10 @@
-package com.learning.java.lesson5.homework4;
+package com.learning.java.lesson5.homework5;
 
 public abstract class Shape {
 
     private String color;
-    private double perimeter;
-    private double square;
+//    private double perimeter;
+//    private double square;
 
 
     public Shape(String color) {
@@ -24,11 +24,8 @@ public abstract class Shape {
     }
 
     public abstract double calculatePerimeter();
-//    {
-//        System.out.println("Perimeters is " + perimeter);
-//    }
 
-    public abstract double calculateSquare() {
-        System.out.println("Square is " + square);
-    }
+
+    public abstract double calculateSquare();
+
 }

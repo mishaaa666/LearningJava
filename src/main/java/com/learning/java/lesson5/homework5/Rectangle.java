@@ -1,12 +1,10 @@
-package com.learning.java.lesson5.homework4;
+package com.learning.java.lesson5.homework5;
 
 public class Rectangle extends Shape {
 
     private double sideA;
     private double sideB;
 
-    private double rectanglePerimeter;
-    private double rectangleSquare;
 
     public Rectangle(String color, double sideA, double sideB) {
         super(color);
@@ -36,15 +34,15 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public void calculatePerimeter() {
-        rectanglePerimeter = (sideA + sideB) * 2;
-        System.out.println("The rectangle perimeter is " + rectanglePerimeter);
+    public double calculatePerimeter() {
+        double rectanglePerimeter = (sideA + sideB) * 2;
+        return rectanglePerimeter;
     }
 
     @Override
-    public void calculateSquare() {
-        rectangleSquare = sideA * sideB;
-        System.out.println("The rectangle square is " + rectangleSquare);
+    public double calculateSquare() {
+        double rectangleSquare = sideA * sideB;
+        return rectangleSquare;
     }
 
 }

@@ -1,4 +1,4 @@
-package com.learning.java.lesson5.homework4;
+package com.learning.java.lesson5.homework5;
 
 public class ShapeExample {
     public static void main(String[] args) {

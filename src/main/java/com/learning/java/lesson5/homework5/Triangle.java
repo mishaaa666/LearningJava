@@ -1,13 +1,9 @@
-package com.learning.java.lesson5.homework4;
+package com.learning.java.lesson5.homework5;
 
 public class Triangle extends Shape {
 
     private double cathetusA;
     private double cathetusB;
-
-    public double hypotenuzy;
-    public double trianglePerimeters;
-    public double triangleSquare;
 
 
     public Triangle(String color, double cathetusA, double cathetusB) {
@@ -40,15 +36,15 @@ public class Triangle extends Shape {
 
 
     @Override
-    public void calculatePerimeter() {
-        hypotenuzy = Math.sqrt(Math.pow(cathetusA, 2) + Math.pow(cathetusB, 2));
-        trianglePerimeters = cathetusA + cathetusB + hypotenuzy;
-        System.out.println("Perimeter of triangle is " + trianglePerimeters);
+    public double calculatePerimeter() {
+        double hypotenuzy = Math.sqrt(Math.pow(cathetusA, 2) + Math.pow(cathetusB, 2));
+        double trianglePerimeters = cathetusA + cathetusB + hypotenuzy;
+        return trianglePerimeters;
     }
 
     @Override
-    public void calculateSquare() {
-        triangleSquare = (cathetusA * cathetusB) / 2;
-        System.out.println("Square of triangle is " + triangleSquare);
+    public double calculateSquare() {
+        double triangleSquare = (cathetusA * cathetusB) / 2;
+        return triangleSquare;
     }
 }

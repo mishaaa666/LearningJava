@@ -1,4 +1,4 @@
-package com.learning.java.lesson5.homework4;
+package com.learning.java.lesson5.homework5;
 
 public class Circle extends Shape {
 
@@ -29,12 +29,14 @@ public class Circle extends Shape {
     @Override
     public double calculatePerimeter() {
         double circleLength = 2 * Math.PI * radius;
-        System.out.println("The length of circle is " + circleLength);
+        //System.out.println("The length of circle is " + circleLength);
+        return circleLength;
     }
 
     @Override
-    public void calculateSquare() {
+    public double calculateSquare() {
         double circleSquare = Math.PI * Math.pow(radius, 2);
-        System.out.println("Square of circle is " + circleSquare);
+        //System.out.println("Square of circle is " + circleSquare);
+        return circleSquare;
     }
 }
