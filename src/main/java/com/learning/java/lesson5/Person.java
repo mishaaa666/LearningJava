@@ -28,6 +28,10 @@ public class Person {
         this.name = name;
     }
 
+    public void work(){
+        System.out.println("I`m lazy. I do nothing");
+    }
+
     //getters and setters
 
     public String getName() {
