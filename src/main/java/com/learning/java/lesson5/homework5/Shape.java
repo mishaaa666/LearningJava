@@ -3,8 +3,6 @@ package com.learning.java.lesson5.homework5;
 public abstract class Shape {
 
     private String color;
-//    private double perimeter;
-//    private double square;
 
 
     public Shape(String color) {
