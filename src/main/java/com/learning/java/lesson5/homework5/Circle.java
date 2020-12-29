@@ -4,9 +4,6 @@ public class Circle extends Shape {
 
     private double radius;
 
-//    private double circleLength;
-//    private double circleSquare;
-
     public Circle(String color, double radius) {
         super(color);
         this.radius = radius;
@@ -28,15 +25,11 @@ public class Circle extends Shape {
 
     @Override
     public double calculatePerimeter() {
-        double circleLength = 2 * Math.PI * radius;
-        //System.out.println("The length of circle is " + circleLength);
-        return circleLength;
+        return 2 * Math.PI * radius;
     }
 
     @Override
     public double calculateSquare() {
-        double circleSquare = Math.PI * Math.pow(radius, 2);
-        //System.out.println("Square of circle is " + circleSquare);
-        return circleSquare;
+        return Math.PI * Math.pow(radius, 2);
     }
 }
