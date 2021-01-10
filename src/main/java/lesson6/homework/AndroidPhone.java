@@ -11,7 +11,7 @@ public class AndroidPhone extends Phone{
     }
 
     @Override
-    public void switchON() {
+    public void switchOn() {
 
     }
 
@@ -20,8 +20,8 @@ public class AndroidPhone extends Phone{
 
     }
 
-    @Override
-    public void call(String countryPrefix, String operatorCode, String phoneNumber) {
-        System.out.println("Phone "+getVendor() + " " + getModel() + " is calling "+countryPrefix + operatorCode + phoneNumber+"... ");
-    }
+//    @Override
+//    public void call(String countryPrefix, String operatorCode, String phoneNumber) {
+//        System.out.println("Phone "+getVendor() + " " + getModel() + " is calling "+countryPrefix + operatorCode + phoneNumber+"... ");
+//    }
 }

@@ -5,17 +5,19 @@ public class PhoneExample {
         Phone firstPhone = new IOSPhone("iPhone", "XR");
         Phone secondPhone = new AndroidPhone("Samsung", "S9");
 
+        PhoneNumber phoneNumber = new PhoneNumber("+93", "796", "1234567");
+        PhoneNumber phoneNumber2 = new PhoneNumber("+38", "063", "1234567");
 
 
         firstPhone.installOS();
-        firstPhone.switchON();
-        firstPhone.call("+38", "063", "1234567");
+        firstPhone.switchOn();
+        firstPhone.call(phoneNumber);
         firstPhone.switchOff();
 
 
         secondPhone.installOS();
-        secondPhone.switchON();
-        secondPhone.call("+93", "796", "1234567");
+        secondPhone.switchOn();
+        secondPhone.call(phoneNumber2);
         secondPhone.switchOff();
     }
 

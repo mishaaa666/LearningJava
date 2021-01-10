@@ -12,6 +12,9 @@ public class PhoneNumber {
         this.phoneNumber = phoneNumber;
     }
 
+    public String toCallingNumber(){
+        return countryPrefix+operatorCode+phoneNumber;
+    }
 //    public void mobilePhoneNumber() {
 //        System.out.println(countryPrefix + operatorCode + phoneNumber);
 //    }

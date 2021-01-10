@@ -30,14 +30,15 @@ public abstract class Phone {
     public abstract void installOS();
 
 
-    public abstract void switchON();
+    public abstract void switchOn();
 
 
     public abstract void switchOff();
 
 
-    public void call(String countryPrefix, String operatorCode, String phoneNumber) {
-        System.out.println("Calling "+countryPrefix + operatorCode + phoneNumber+"... ");
+    public void call(PhoneNumber phoneNumber){
+//            String countryPrefix, String operatorCode, String phoneNumber) {
+//        System.out.println("Calling "+countryPrefix + operatorCode + phoneNumber+"... ");
     }
 
 }
