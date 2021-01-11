@@ -1,4 +1,4 @@
-package lesson7.homework;
+package com.learning.java.lesson7.homework;
 
 public class Employee extends Person {
     private int salary;

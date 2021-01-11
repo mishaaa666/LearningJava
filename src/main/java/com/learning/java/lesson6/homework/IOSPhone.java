@@ -1,4 +1,4 @@
-package lesson6.homework;
+package com.learning.java.lesson6.homework;
 
 public class IOSPhone extends Phone {
 

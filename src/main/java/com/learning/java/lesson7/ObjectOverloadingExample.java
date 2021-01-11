@@ -1,4 +1,4 @@
-package lesson7;
+package com.learning.java.lesson7;
 
 public class ObjectOverloadingExample {
 
