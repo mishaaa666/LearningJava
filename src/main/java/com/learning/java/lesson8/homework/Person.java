@@ -14,11 +14,6 @@ public class Person {
         return name;
     }
 
-    //не потрібен
-   // public void setName(String name) {
-    //    this.name = name;
-   // }
-
     public int getAge() {
         return age;
     }

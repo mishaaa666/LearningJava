@@ -2,7 +2,7 @@ package com.learning.java.lesson8.homework;
 
 public class CarService {
 
-    private String newOwner;
+    private Person newOwner;
     private String newColor;
 
 

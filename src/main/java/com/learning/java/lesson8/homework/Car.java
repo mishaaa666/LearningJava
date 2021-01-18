@@ -11,7 +11,6 @@ public class Car {
         this.vendor = vendor;
         this.model = model;
         this.color = color;
-        //owner = person.getName();
     }
 
     public String getColor() {
