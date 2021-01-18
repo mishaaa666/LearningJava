@@ -5,13 +5,13 @@ public class Car {
     private String vendor;
     private String model;
     private String color;
-    private String owner;
+    private Person owner;
 
-    public Car(String vendor, String model, String color, Person person) {
+    public Car(String vendor, String model, String color) {
         this.vendor = vendor;
         this.model = model;
         this.color = color;
-        owner = person.getName();
+        //owner = person.getName();
     }
 
     public String getColor() {
@@ -22,21 +22,24 @@ public class Car {
         this.color = color;
     }
 
-    public String getOwner() {
+    public Person getOwner() {
         return owner;
     }
 
-    public void setOwner(String owner) {
-        this.owner = owner;
+    public void setOwner(Person owner) {
+        if (this.owner == null) {
+            this.owner = owner;
+        } else {
+            System.out.println("Cannot set an owner!");
+        }
     }
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "vendor='" + vendor + '\'' +
-                ", model='" + model + '\'' +
-                ", color='" + color + '\'' +
-                ", owner='" + owner + '\'' +
-                '}';
+        @Override
+        public String toString () {
+            return "Car{" +
+                    "vendor='" + vendor + '\'' +
+                    ", model='" + model + '\'' +
+                    ", color='" + color + '\'' +
+                    ", owner='" + owner + '\'' +
+                    '}';
+        }
     }
-}
