@@ -1,5 +1,7 @@
 package com.learning.java.lesson10.homework;
 
+import java.util.Objects;
+
 public class Person {
 
     private String name;
@@ -43,8 +45,11 @@ public class Person {
             return false;
         } else {
             if (obj instanceof Person) {
-                Person person1 = (Person) obj;
-                return this.passportNumber.equals(person1.passportNumber);
+                Person other = (Person) obj;
+               // Objects.equals(this.passportNumber, other.passportNumber);
+                return this.passportNumber.equals(other.passportNumber)
+                        && this.age == other.age
+                        && this.name.equals(other.name);
             } else {
                 return false;
             }
