@@ -20,7 +20,7 @@ public class ArrayRandom {
     }
 
 
-    private static int[] generateRandomArray() {
+    public static int[] generateRandomArray() {
         Random random = new Random();
         int n = random.nextInt(100);
         System.out.println("n = " + n);
