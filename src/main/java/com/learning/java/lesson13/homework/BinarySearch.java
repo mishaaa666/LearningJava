@@ -14,12 +14,14 @@ public class BinarySearch {
         System.out.println();
         int firstElement = 0;
         int lastElement = sortedArray.length - 1;
-        int index = binarySearch(sortedArray, 9, firstElement, lastElement);
+        int index = binarySearch(sortedArray, 9);
         System.out.println(index + 1);
     }
 
-    public static int binarySearch(int[] sortedArray, int elementToFind, int firstElement, int lastElement) {
+    public static int binarySearch(int[] sortedArray, int elementToFind) {
         int indexOfSearchingElement = 0;
+        int firstElement = 0;
+        int lastElement = sortedArray.length - 1;
         while (firstElement <= lastElement) {
             int middleElement = (firstElement + lastElement) / 2;
             if (sortedArray[middleElement] < elementToFind) {
