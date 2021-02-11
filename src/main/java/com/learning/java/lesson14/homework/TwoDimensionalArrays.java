@@ -49,7 +49,7 @@ public class TwoDimensionalArrays {
         int[][] arr3 = new int[n][k];
 
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < k; k++) {
+            for (int j = 0; j < k; j++) {
                 for (int r = 0; r < m2; r++) {
                     arr3[i][j] += arr1[i][r] * arr2[r][j];
 
