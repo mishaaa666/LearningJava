@@ -32,18 +32,17 @@ public class TwoDimensionalArrays {
     }
 
 
-
-
     public static int[][] multiplyTwoArrays(int[][] arr1, int[][] arr2) {
-//        Random random = new Random();
-//        int n = random.nextInt(10);
-//        int m = random.nextInt(10);
-//        int k = random.nextInt(10);
         int n = arr1.length;
         int m1 = arr1[0].length;
 
         int m2 = arr2.length;
         int k = arr2[0].length;
+
+        if (m1 != m2) {
+            System.err.println("Wrong output!");
+            return null;
+        }
 
 
         int[][] arr3 = new int[n][k];
