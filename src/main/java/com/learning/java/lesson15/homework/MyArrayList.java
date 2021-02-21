@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class MyArrayList {
 
     private Object[] elements;
-    private Object[] elementsList2;
+    //    private Object[] elementsList2;
     private int size;
 
     public MyArrayList() {
@@ -18,12 +18,27 @@ public class MyArrayList {
         elements[4] = "Ira";
     }
 
-    public Object[] addToIndex(Object o, int index) {
-//        o = new Object[size];
-        Object[] newElem = Arrays.copyOf(elements, size * 2);
-        System.arraycopy(elements, 0, newElem, 5, size);
-        return elements;
+    public void addToIndex(int index) {
+//        o = new Object[size+1];
+        for (int i = 0; i < index - 1; i++) {
+            Object[] o = Arrays.copyOf(elements, index + 1);
+            o[index] = "Lyusya";
+            for (i = index + 1; i < size; i++) {
+                o = Arrays.copyOf(elements, size + 1);
+            }
+//            o[index] = o[i];
+
+
+        }
     }
+
+//    public Object[] addToIndex(Object o, int index) {
+//        o = new Object[size];
+//
+//        Object[] newElem = Arrays.copyOf(elements, size * 2);
+//        System.arraycopy(elements, 0, newElem, 5, size);
+//        return elements;
+//    }
 
     public void add(Object o) {
         o = new Object[size];
@@ -80,7 +95,7 @@ public class MyArrayList {
         System.out.println(myArrayList);
         myArrayList.add("one");
         System.out.println(myArrayList);
-        myArrayList.addToIndex("two", 5);
+        myArrayList.addToIndex(5);
         System.out.println(myArrayList);
         myArrayList.removeByIndex(4);
         System.out.println(myArrayList);
