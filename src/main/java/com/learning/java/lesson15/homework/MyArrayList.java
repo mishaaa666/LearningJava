@@ -48,9 +48,17 @@ public class MyArrayList {
 
     public void removeByElement(Object o) {
         for (int i = 0; i < size - 1; i++) {
-            if (elements[i] == o){
+            if (elements[i] == o) {
                 elements[i - 1] = elements[i];
                 elements[i] = null;
+            }
+        }
+    }
+
+    public void getElementByIndex(int index) {
+        for (int i = 0; i < size - 1; i++) {
+            if (elements[i] == elements[index]) {
+                System.out.println(elements[index]);
             }
         }
     }
@@ -58,10 +66,6 @@ public class MyArrayList {
 
     @Override
     public String toString() {
-//        System.out.println(elements[0]);
-//        for (int i = 1; i < size; i++){
-//            System.out.println(elements[i]);
-//        }
         StringBuilder stringBuilder = new StringBuilder("[");
         for (int i = 0; i < size; i++) {
             stringBuilder.append(elements[i]);
@@ -78,9 +82,6 @@ public class MyArrayList {
         MyArrayList myArrayList = new MyArrayList();
         System.out.println(myArrayList);
         myArrayList.add("one");
-        myArrayList.add("one");
-        myArrayList.add("one");
-        myArrayList.add("one");
         System.out.println(myArrayList);
         myArrayList.addToIndex("two", 5);
         System.out.println(myArrayList);
@@ -88,5 +89,6 @@ public class MyArrayList {
         System.out.println(myArrayList);
         myArrayList.removeByElement("Ivan");
         System.out.println(myArrayList);
+        myArrayList.getElementByIndex(2); //запитати чому коли null виводяться всі елементи null
     }
 }
