@@ -21,7 +21,6 @@ public class MyArrayList {
     public Object[] addToIndex(Object o, int index) {
 //        o = new Object[size];
         Object[] newElem = Arrays.copyOf(elements, size * 2);
-//        Object[] newElem = new Object[size];
         System.arraycopy(elements, 0, newElem, 5, size);
         return elements;
     }
