@@ -38,8 +38,6 @@ public class MyArrayList {
     }
 
     public void removeByIndex(int index) {
-//        elementsList2 = elements;
-//        index = 4;
         for (int i = 0; i < size - 1; i++) {
             elements[index - 1] = elements[index];
             elements[index] = null;
