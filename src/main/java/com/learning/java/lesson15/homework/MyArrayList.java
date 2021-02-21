@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class MyArrayList {
 
     private Object[] elements;
+    private Object[] elementsList2;
     private int size;
 
     public MyArrayList() {
@@ -37,7 +38,14 @@ public class MyArrayList {
     }
 
     public void removeByIndex(int index) {
-        for (int i = 0; i < size; i++) {
+//        elementsList2 = elements;
+//        index = 4;
+        for (int i = 0; i < size-1; i++) {
+            elements[index-1] = elements[index];
+            elements[index] = null;
+
+
+
 
         }
 
@@ -70,6 +78,8 @@ public class MyArrayList {
         myArrayList.add("one");
         System.out.println(myArrayList);
         myArrayList.addToIndex("two", 5);
+        System.out.println(myArrayList);
+        myArrayList.removeByIndex(4);
         System.out.println(myArrayList);
     }
 }
