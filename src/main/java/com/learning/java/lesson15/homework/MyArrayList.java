@@ -40,16 +40,21 @@ public class MyArrayList {
     public void removeByIndex(int index) {
 //        elementsList2 = elements;
 //        index = 4;
-        for (int i = 0; i < size-1; i++) {
-            elements[index-1] = elements[index];
+        for (int i = 0; i < size - 1; i++) {
+            elements[index - 1] = elements[index];
             elements[index] = null;
-
-
-
-
         }
-
     }
+
+    public void removeByElement(Object o) {
+        for (int i = 0; i < size - 1; i++) {
+            if (elements[i] == o){
+                elements[i - 1] = elements[i];
+                elements[i] = null;
+            }
+        }
+    }
+
 
     @Override
     public String toString() {
@@ -80,6 +85,8 @@ public class MyArrayList {
         myArrayList.addToIndex("two", 5);
         System.out.println(myArrayList);
         myArrayList.removeByIndex(4);
+        System.out.println(myArrayList);
+        myArrayList.removeByElement("Ivan");
         System.out.println(myArrayList);
     }
 }
