@@ -20,11 +20,11 @@ public class MyArrayList {
 
     public void addToIndex(int index) {
 //        o = new Object[size+1];
-        for (int i = 0; i < index - 1; i++) {
-            Object[] o = Arrays.copyOf(elements, index + 1);
-            o[index] = "Lyusya";
+        for (int i = 0; i < index; i++) {
+            Object[] o = Arrays.copyOf(elements, index +1);
+            o[index + 1] = "Lyusya";
             for (i = index + 1; i < size; i++) {
-                o = Arrays.copyOf(elements, size + 1);
+                o[i] = Arrays.copyOf(elements, size + 1);
             }
 //            o[index] = o[i];
 
