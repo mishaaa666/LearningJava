@@ -5,74 +5,79 @@ import java.util.Arrays;
 public class MyArrayList {
 
     private Object[] elements;
-    //    private Object[] elementsList2;
     private int size;
 
     public MyArrayList() {
-        size = 10;
-        elements = new Object[size];
-        elements[0] = "Vasya";
-        elements[1] = "Ivan";
-        elements[2] = "Petro";
-        elements[3] = "Katya";
-        elements[4] = "Ira";
+        size = 0;
+        elements = new Object[10];
     }
 
-    public void addToIndex(int index) {
-//        o = new Object[size+1];
-        for (int i = 0; i < index; i++) {
-            Object[] o = Arrays.copyOf(elements, index +1);
-            o[index + 1] = "Lyusya";
-            for (i = index + 1; i < size; i++) {
-                o[i] = Arrays.copyOf(elements, size + 1);
+    public void addToIndex(int index, Object o) {
+        // 1. Check that real size is enough ??? (size >= elements.length)
+        if (size >= elements.length) {
+            // 2. Extend array if needed
+            elements = Arrays.copyOf(elements, size * 2);
+        }
+        // 3. 5 7 8 9      + (2, 10)
+        // 4. 5 7 8 9 null
+        //5 7 8 8 9
+        System.arraycopy(elements, index, elements, index + 1, size - 2);
+        //5 7 10 8 9
+        elements[index] = o;
+        size++;
+        if (index >= size) {
+            while (index >= size) {
+                elements[index] = null;
+                size++;
             }
-//            o[index] = o[i];
-
+//        } else {
+//            elements[index] = o;
+//            size++;
+//            if (index >= size) {
+//                elements[index] = null;
+//                size++;
 
         }
+
+        // 3. 5 7 8 9      + (2, 10)
+        // 4. 5 7 8 9 null
+        //System.arraycopy(elements, 2, elements, 2 + 1, size - 2);
+        // System.arraycopy(elements, 2, elements, 2 + 1, size(4) - 2)
+        //    5 7 8 8 9
+        // 5. 5 7 10 8 9
     }
 
-//    public Object[] addToIndex(Object o, int index) {
-//        o = new Object[size];
-//
-//        Object[] newElem = Arrays.copyOf(elements, size * 2);
-//        System.arraycopy(elements, 0, newElem, 5, size);
-//        return elements;
-//    }
 
     public void add(Object o) {
-        o = new Object[size];
-        if (size < elements.length) {
-            elements[size] = o;
-            size++;
-        } else {
-            Object[] newElements = Arrays.copyOf(elements, size * 2);
+        if (elements.length <= size) {
+            elements = Arrays.copyOf(elements, size * 2);
         }
-
+        elements[size] = o;
+        size++;
     }
 
     public void removeByIndex(int index) {
-        for (int i = 0; i < size - 1; i++) {
-            elements[index - 1] = elements[index];
-            elements[index] = null;
+        // 5 4 78 9 8   - 1
+        // 5 78 9 8
+        for (int i = index; i < size - 1; i++) {
+            elements[index] = elements[index + 1]; // 5 78 9 8 8
         }
+        // System.arraycopy(elements, index+1, elements, index, size - index-1)
+        elements[size - 1] = null;
+        // 5 78 9 8 null
+        size--;
     }
 
     public void removeByElement(Object o) {
-        for (int i = 0; i < size - 1; i++) {
-            if (elements[i] == o) {
-                elements[i - 1] = elements[i];
-                elements[i] = null;
+        for (int i = 0; i < size; i++) {
+            if (elements[i].equals(o)) {
+                removeByIndex(i);
             }
         }
     }
 
-    public void getElementByIndex(int index) {
-        for (int i = 0; i < size - 1; i++) {
-            if (elements[i] == elements[index]) {
-                System.out.println(elements[index]);
-            }
-        }
+    public Object getElementByIndex(int index) {
+        return elements[index];
     }
 
 
@@ -94,13 +99,16 @@ public class MyArrayList {
         MyArrayList myArrayList = new MyArrayList();
         System.out.println(myArrayList);
         myArrayList.add("one");
+        myArrayList.add("one");
+        myArrayList.add("one");
+        myArrayList.add("one");
         System.out.println(myArrayList);
-        myArrayList.addToIndex(5);
+        myArrayList.addToIndex(5, "five");
         System.out.println(myArrayList);
-        myArrayList.removeByIndex(4);
-        System.out.println(myArrayList);
-        myArrayList.removeByElement("Ivan");
-        System.out.println(myArrayList);
-        myArrayList.getElementByIndex(2); //запитати чому коли null виводяться всі елементи null
+//        myArrayList.removeByIndex(4);
+//        System.out.println(myArrayList);
+//        myArrayList.removeByElement("Ivan");
+//        System.out.println(myArrayList);
+//        myArrayList.getElementByIndex(2);
     }
 }
