@@ -13,38 +13,12 @@ public class MyArrayList {
     }
 
     public void addToIndex(int index, Object o) {
-        // 1. Check that real size is enough ??? (size >= elements.length)
         if (size >= elements.length) {
-            // 2. Extend array if needed
             elements = Arrays.copyOf(elements, size * 2);
         }
-        // 3. 5 7 8 9      + (2, 10)
-        // 4. 5 7 8 9 null
-        //5 7 8 8 9
         System.arraycopy(elements, index, elements, index + 1, size - 2);
-        //5 7 10 8 9
         elements[index] = o;
         size++;
-        if (index >= size) {
-            while (index >= size) {
-                elements[index] = null;
-                size++;
-            }
-//        } else {
-//            elements[index] = o;
-//            size++;
-//            if (index >= size) {
-//                elements[index] = null;
-//                size++;
-
-        }
-
-        // 3. 5 7 8 9      + (2, 10)
-        // 4. 5 7 8 9 null
-        //System.arraycopy(elements, 2, elements, 2 + 1, size - 2);
-        // System.arraycopy(elements, 2, elements, 2 + 1, size(4) - 2)
-        //    5 7 8 8 9
-        // 5. 5 7 10 8 9
     }
 
 
@@ -65,6 +39,11 @@ public class MyArrayList {
         // System.arraycopy(elements, index+1, elements, index, size - index-1)
         elements[size - 1] = null;
         // 5 78 9 8 null
+        size--;
+    }
+
+    public void removeElement(int index) {
+        System.arraycopy(elements, index + 1, elements, index, size - index - 1);
         size--;
     }
 
@@ -99,16 +78,19 @@ public class MyArrayList {
         MyArrayList myArrayList = new MyArrayList();
         System.out.println(myArrayList);
         myArrayList.add("one");
-        myArrayList.add("one");
-        myArrayList.add("one");
-        myArrayList.add("one");
+        myArrayList.add("two");
+        myArrayList.add("three");
+        myArrayList.add("four");
         System.out.println(myArrayList);
+        myArrayList.addToIndex(4, "five");
         myArrayList.addToIndex(5, "five");
         System.out.println(myArrayList);
-//        myArrayList.removeByIndex(4);
-//        System.out.println(myArrayList);
-//        myArrayList.removeByElement("Ivan");
-//        System.out.println(myArrayList);
-//        myArrayList.getElementByIndex(2);
+        myArrayList.removeElement(3);
+        System.out.println(myArrayList);
+        myArrayList.removeByIndex(4);
+        System.out.println(myArrayList);
+        myArrayList.removeByElement("five");
+        System.out.println(myArrayList);
+        myArrayList.getElementByIndex(2);
     }
 }
