@@ -81,6 +81,8 @@ public class MyArrayList {
         myArrayList.add("two");
         myArrayList.add("three");
         myArrayList.add("four");
+
+        myArrayList.getElementByIndex(2);
         System.out.println(myArrayList);
         myArrayList.addToIndex(4, "five");
         myArrayList.addToIndex(5, "five");
@@ -91,6 +93,5 @@ public class MyArrayList {
         System.out.println(myArrayList);
         myArrayList.removeByElement("five");
         System.out.println(myArrayList);
-        myArrayList.getElementByIndex(2);
     }
 }
