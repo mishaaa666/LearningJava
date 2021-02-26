@@ -31,14 +31,10 @@ public class MyArrayList {
     }
 
     public void removeByIndex(int index) {
-        // 5 4 78 9 8   - 1
-        // 5 78 9 8
         for (int i = index; i < size - 1; i++) {
             elements[index] = elements[index + 1]; // 5 78 9 8 8
         }
-        // System.arraycopy(elements, index+1, elements, index, size - index-1)
         elements[size - 1] = null;
-        // 5 78 9 8 null
         size--;
     }
 
